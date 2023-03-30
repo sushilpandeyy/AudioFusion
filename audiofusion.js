@@ -28,6 +28,21 @@ rain.addEventListener("input", function aud(){
     rain_audio.volume=vol;
 });  
 
+var cracker_audio = document.getElementById("cracker");
+var cracker = document.getElementById("crackerrange");
+cracker.addEventListener("input", function aud(){  
+    var vol = document.getElementById('crackerrange').value;  
+    if(vol>0){
+        cracker_audio.play();
+        document.getElementById("crackerval").innerText=vol*100;
+    }
+    else if(vol==0){
+        cracker_audio.pause();
+        document.getElementById("crackerval").innerText=vol*100;
+    } 
+    cracker_audio.volume=vol;
+});  
+
 var mbf_audio = document.getElementById("mbf");
 var mbf = document.getElementById("mbfrange");
 mbf.addEventListener("input", function aud(){  
@@ -101,4 +116,34 @@ cb.addEventListener("input", function aud(){
         document.getElementById("cbval").innerText=vol*100;
     } 
     cb_audio.volume=vol;
+});  
+
+var cb_audio = document.getElementById("cb");
+var cb = document.getElementById("cbrange");
+cb.addEventListener("input", function aud(){  
+    var vol = document.getElementById('cbrange').value;  
+    if(vol>0){
+        cb_audio.play();
+        document.getElementById("cbval").innerText=vol*100;
+    }
+    else if(vol==0){
+        cb_audio.pause();
+        document.getElementById("cbval").innerText=vol*100;
+    } 
+    cb_audio.volume=vol;
+});
+
+var rail_audio = document.getElementById("railway");
+var rail = document.getElementById("railrange");
+rail.addEventListener("input", function aud(){  
+    var vol = document.getElementById('railrange').value;  
+    if(vol>0){
+        rail_audio.play();
+        document.getElementById("railval").innerText=vol*100;
+    }
+    else if(vol==0){
+        rail_audio.pause();
+        document.getElementById("railval").innerText=vol*100;
+    } 
+    rail_audio.volume=vol;
 });  
